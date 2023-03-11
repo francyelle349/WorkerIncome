@@ -27,13 +27,13 @@ public class Executar {
         System.out.print("How many contracts to this worker:");
 
         int numberOfContracts = sc.nextInt();
+        sc.nextLine();
         int count = 0;
         for(int i = 0; i < numberOfContracts;i++){
             count++;
             System.out.printf("Enter contract %s data:%n",count);
             System.out.println("FORMAT: DD/MM/YYYY:");
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            sc.nextLine();
             String dateString = sc.nextLine();
             LocalDate date = LocalDate.parse(dateString,formatter);
             System.out.print("Value per Hour:");
